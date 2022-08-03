@@ -18,10 +18,8 @@ class UpdateTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<TodoCubit, TodoStates>(
-      listener: (BuildContext context, state)
-      {
-        if(state is SuccessUpdatingDataFromDatabaseState)
-        {
+      listener: (BuildContext context, state) {
+        if (state is SuccessUpdatingDataFromDatabaseState) {
           Navigator.pop(context);
         }
       },
@@ -29,7 +27,7 @@ class UpdateTaskScreen extends StatelessWidget {
         var cubit = TodoCubit.get(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text('Update your task'.tr()),
+            title: Text('Update your notes'.tr()),
           ),
           body: Form(
             key: _formKey,
@@ -65,7 +63,8 @@ class UpdateTaskScreen extends StatelessWidget {
                         prefixIcon: Icons.watch_later_outlined,
                         onTap: () {
                           showTimePicker(
-                              context: context, initialTime: TimeOfDay.now())
+                                  context: context,
+                                  initialTime: TimeOfDay.now())
                               .then((value) {
                             timeController.text = value!.format(context);
                           }).catchError((error) {
@@ -88,10 +87,10 @@ class UpdateTaskScreen extends StatelessWidget {
                         prefixIcon: Icons.calendar_view_day,
                         onTap: () {
                           showDatePicker(
-                              context: context,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime.now(),
-                              lastDate: DateTime.parse('2040-12-30'))
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime.now(),
+                                  lastDate: DateTime.parse('2040-12-30'))
                               .then((value) {
                             dateController.text =
                                 DateFormat.yMMMd().format(value!);
@@ -119,20 +118,21 @@ class UpdateTaskScreen extends StatelessWidget {
                     ),
                     MaterialButton(
                       height: 40.0,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0)),
                       minWidth: double.infinity,
                       color: Colors.teal,
                       onPressed: () {
-                        if(_formKey.currentState!.validate())
-                        {
+                        if (_formKey.currentState!.validate()) {
                           cubit.updateDataIntoDatabase(
                               title: titleController.text,
                               date: dateController.text,
                               time: timeController.text,
-                              description: desController.text, id: id);
+                              description: desController.text,
+                              id: id);
                         }
                       },
-                      child: Text('Update Task'.tr()),
+                      child: Text('Update Notes'.tr()),
                     ),
                     // so now we get our texts...
                     // lets go to our component

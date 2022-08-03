@@ -20,9 +20,9 @@ class HomeScreen extends StatelessWidget {
         var cubit = TodoCubit.get(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text('My task'.tr()),
+            title: Text('My Notes'.tr()),
             elevation: 1,
-            backgroundColor: Colors.deepOrange.shade200,
+            backgroundColor: Colors.deepOrange,
           ),
           drawer: const Drawer(
             child: DrawerScreen(),
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           const Icon(Icons.hourglass_empty),
                           Text(
-                            'There is no tasks here'.tr(),
+                            'There is no Notes here'.tr(),
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyText1!

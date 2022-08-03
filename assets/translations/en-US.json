@@ -3,7 +3,7 @@
   "Arabic": "Arabic",
   "English": "English",
   "Change your Language": "Change your Language",
-  "Add your task": "Add your task",
+  "Add your Notes": "Add your Notes",
   "Please add your title": "Please add your title",
   "Title": "Title",
   "Add your Title": "Add your Title",
@@ -16,10 +16,10 @@
   "Please add your description": "Please add your description",
   "Description": "Description",
   "Add your Description": "Add your Description",
-  "Add Task": "Add Task",
-  "My task": "My task",
-  "There is no tasks here": "There is no tasks here",
-  "Update your task" : "Update your task",
-  "Update Task" : "Update Task"
+  "Add Notes": "Add Notes",
+  "My Notes": "My Notes",
+  "There is no Notes here": "There is no Notes here",
+  "Update your Notes" : "Update your Notes",
+  "Update Notes" : "Update Notes"
 }
 

@@ -15,10 +15,8 @@ class AddTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<TodoCubit, TodoStates>(
-      listener: (BuildContext context, state)
-      {
-        if(state is SuccessInsertToDatabaseState)
-        {
+      listener: (BuildContext context, state) {
+        if (state is SuccessInsertToDatabaseState) {
           Navigator.pop(context);
         }
       },
@@ -26,7 +24,7 @@ class AddTaskScreen extends StatelessWidget {
         var cubit = TodoCubit.get(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text('Add your task'.tr()),
+            title: Text('Add your Notes'.tr()),
           ),
           body: Form(
             key: _formKey,
@@ -62,7 +60,8 @@ class AddTaskScreen extends StatelessWidget {
                         prefixIcon: Icons.watch_later_outlined,
                         onTap: () {
                           showTimePicker(
-                                  context: context, initialTime: TimeOfDay.now())
+                                  context: context,
+                                  initialTime: TimeOfDay.now())
                               .then((value) {
                             timeController.text = value!.format(context);
                           }).catchError((error) {
@@ -116,20 +115,20 @@ class AddTaskScreen extends StatelessWidget {
                     ),
                     MaterialButton(
                       height: 40.0,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0)),
                       minWidth: double.infinity,
                       color: Colors.deepOrange,
                       onPressed: () {
-                       if(_formKey.currentState!.validate())
-                       {
-                         cubit.insertToDatabase(
-                             title: titleController.text,
-                             date: dateController.text,
-                             time: timeController.text,
-                             description: desController.text);
-                       }
+                        if (_formKey.currentState!.validate()) {
+                          cubit.insertToDatabase(
+                              title: titleController.text,
+                              date: dateController.text,
+                              time: timeController.text,
+                              description: desController.text);
+                        }
                       },
-                      child: Text('Add Task'.tr()),
+                      child: Text('Add Notes'.tr()),
                     ),
                     // so now we get our texts...
                     // lets go to our component

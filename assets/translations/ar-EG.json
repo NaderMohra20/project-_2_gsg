@@ -3,7 +3,7 @@
   "Arabic" : "اللغة العربية",
   "English" : "اللغة الإنجليزية",
   "Change your Language": "غير اللغة إلى...",
-  "Add your task": "أضف مهامك",
+  "Add your Notes": "أضف ملاحظاتك",
   "Please add your title": "الرجاء اضافة العنوان",
   "Title": "العنوان",
   "Add your Title": "أضف هنا عنوانك",
@@ -16,11 +16,11 @@
   "Please add your description" : "الرجاء اضافة التفاصيل",
   "Description" : "التفاصيل",
   "Add your Description" : "أضف التفاصيل هنا",
-  "Add Task": "أضف مهامك",
-  "My task": "مهامي",
-  "There is no tasks here": "لا يوجد مهام هنا",
-  "Update your task" : "حدث مهامك",
-  "Update Task" : "حدث البيانات"
+  "Add Notes": "أضف ملاحظاتك",
+  "My Notes": "ملاحطتي",
+  "There is no Notes here": "لا يوجد ملاحطة هنا",
+  "Update your Notes" : "حدث ملاحطتي",
+  "Update Notes" : "حدث البيانات"
 
 
 
